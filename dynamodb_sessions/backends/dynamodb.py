@@ -48,7 +48,7 @@ def dynamodb_connection_factory():
     Since SessionStore is called for every single page view, we'd be
     establishing new connections so frequently that performance would be
     hugely impacted. We'll lazy-load this here on a per-worker basis. Since
-    boto3.resource.('dynamodb')objects are state-less (aside from security
+    boto3.resource.('dynamodb') objects are state-less (aside from security
     tokens), we're not too concerned about thread safety issues.
     """
 
